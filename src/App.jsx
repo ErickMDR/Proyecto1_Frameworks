@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import { RecipeProvider } from './context/RecipeContext.jsx';
-import Login from './components/Auth/Login/Login.jsx';
+import Login from './components/Auth/Login.jsx';
 import Header from './components/Layout/Header/Header.jsx';
 import Footer from './components/Layout/Footer/Footer.jsx';
 import RecipeList from './components/Recipes/RecipeList/RecipeList.jsx';
