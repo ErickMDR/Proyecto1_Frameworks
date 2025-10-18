@@ -1,0 +1,290 @@
+.recipeCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.recipeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Vista Grid */
+.recipeCard.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeCard.grid .image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipeCard.grid .content {
+  padding: 1rem;
+}
+
+.recipeCard.grid .title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.recipeCard.grid .category {
+  margin: 0;
+  color: #9CE37D;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Vista de Lista */
+.recipeCard.list {
+  display: flex;
+  min-height: 150px;
+}
+
+.recipeCard.list .listLayout {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.recipeCard.list .listContent {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipeCard.list .listImage {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 0 8px 8px 0;
+}
+
+.recipeCard.list .title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.recipeCard.list .category {
+  margin: 0 0 1rem 0;
+  color: #9CE37D;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.recipeCard.list .ingredientsPreview {
+  margin-top: auto;
+}
+
+.recipeCard.list .ingredientsPreview h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.recipeCard.list .ingredientsPreview ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipeCard.list .ingredientPreview {
+  padding: 0.2rem 0;
+  font-size: 0.85rem;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.recipeCard.list .ingredientPreview:last-child {
+  border-bottom: none;
+}
+
+.recipeCard.list .ingredientPreview span {
+  color: #888;
+  font-style: italic;
+}
+
+.recipeCard.list .moreIngredients {
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+  color: #9CE37D;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Vista de Columna */
+.recipeCard.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipeCard.column .columnLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipeCard.column .columnImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recipeCard.column .columnContent {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeCard.column .title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.recipeCard.column .category {
+  margin: 0 0 1rem 0;
+  color: #9CE37D;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.recipeCard.column .ingredientsPreview {
+  margin-top: auto;
+}
+
+.recipeCard.column .ingredientsPreview h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.recipeCard.column .ingredientsPreview ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipeCard.column .ingredientPreview {
+  padding: 0.3rem 0;
+  font-size: 0.85rem;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.3;
+}
+
+.recipeCard.column .ingredientPreview:last-child {
+  border-bottom: none;
+}
+
+.recipeCard.column .ingredientPreview span {
+  color: #888;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.recipeCard.column .moreIngredients {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  color: #9CE37D;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Vista de Mosaico */
+.recipeCard.mosaic {
+  aspect-ratio: 1;
+}
+
+.recipeCard.mosaic .mosaicImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Opciones de borrar y eliminar */
+.options {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+}
+
+.editButton,
+.deleteButton {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.editButton:hover {
+  background: #9CE37D;
+  color: white;
+}
+
+.deleteButton:hover {
+  background: #9CE37D;
+  color: white;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .recipeCard.column .columnImage {
+    height: 160px;
+  }
+  
+  .recipeCard.column .columnContent {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipeCard.list {
+    min-height: auto;
+  }
+  
+  .recipeCard.list .listLayout {
+    flex-direction: column;
+  }
+  
+  .recipeCard.list .listImage {
+    width: 100%;
+    height: 120px;
+    border-radius: 0 0 8px 8px;
+    order: -1;
+  }
+  
+  .recipeCard.list .listContent {
+    padding: 1rem;
+  }
+  
+  .recipeCard.column .columnImage {
+    height: 140px;
+  }
+  
+  .recipeCard.column .columnContent {
+    padding: 1rem;
+  }
+}
