@@ -1,0 +1,43 @@
+.recipeList {
+  display: grid;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid: Imagen, titulo y categoria */
+.recipeList.grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Lista: imagen a la derecha */
+.recipeList.list {
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Columna: tres columnas con imagen arriba */
+.recipeList.column {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Mosaico: Solo imágenes */
+.recipeList.mosaic {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .recipeList.column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .recipeList.list,
+  .recipeList.column {
+    grid-template-columns: 1fr;
+  }
+}
