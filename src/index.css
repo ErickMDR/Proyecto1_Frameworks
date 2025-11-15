@@ -27,7 +27,6 @@ input, textarea {
   font-family: inherit;
 }
 
-/* Scrollbar personalizado */
 ::-webkit-scrollbar {
   width: 8px;
 }
